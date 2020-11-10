@@ -16,7 +16,7 @@ for path, subdirs, files in os.walk(root):
 
 print(fileList)
 
-combined_csv = pd.concat([pd.read_csv(f) for f in fileList])
+combined_csv = pd.concat([pd.read_csv(f) for f in fileList], ignore_index=True)
 
 combined_csv.to_csv('combined_data.csv', index=False)
 
