@@ -5,7 +5,7 @@ import os
 
 
 # ================== Combining data files ====================
-root = './data'
+root = './2020.3 data'
 fileList = []
 
 for path, subdirs, files in os.walk(root):
@@ -18,7 +18,7 @@ print(fileList)
 
 combined_csv = pd.concat([pd.read_csv(f) for f in fileList], ignore_index=True)
 
-combined_csv.to_csv('combined_data.csv', index=False)
+combined_csv.to_csv('2020.3-weather.csv', index=False)
 
 
 
